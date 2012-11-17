@@ -1,0 +1,41 @@
+     1: // B. Bourque 1/10/2008
+     2: // Delay routines
+     3: 
+     4: #include <pic.h>                // Always include this
+     5: #include <stdio.h>
+     6: 
+     7: #include "lcd.h"
+     8: #include "delay.h"      
+     9: 
+    10: // The following line is required. do not let it break across lines
+    11: __CONFIG(FOSC_INTRC_NOCLKOUT & WDTE_OFF & PWRTE_OFF & MCLRE_OFF & CP_OFF & CPD_OFF & BOREN_OFF & IESO_OFF & FCMEN_OFF & LVP_OFF & DEBUG_OFF);
+    12: 
+    13: #define LED RC0
+    14: 
+    15: void main(void) {
+    16: 
+    17: 
+    18:         ANSEL = 0;              // Pin function digital
+    19:         ANSELH = 0;             // Pin function digital
+    20:         
+    21:         PORTC = 0; // Set the port off
+    22:         TRISC = 0; // Set the port to outputs
+    23:         
+    24:         lcd_init();
+    25: 
+    26:         // Your main code here
+    27:         while(1)
+    28:         {
+    29:                 LED = !LED;
+    30:                 if(LED == 0)
+    31:                 {
+    32:                         printf("On\n");
+    33:                 }
+    34:                 else
+    35:                 {
+    36:                         printf("Off\n");
+    37:                 }
+    38:                 delayms(1000);
+    39:         }
+    40: }
+    41: 
