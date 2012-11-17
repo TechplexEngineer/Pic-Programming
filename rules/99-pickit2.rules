@@ -1,0 +1,2 @@
+ATTRS{product}=="PICkit 2 Microcontroller Programmer", MODE="0666"
+ACTION=="add", BUS=="usb", KERNEL=="hiddev*", ATTRS{product}=="PICkit 2 Microcontroller Programmer", RUN+="/sbin/pickit2 $devpath $id", MODE="0666"

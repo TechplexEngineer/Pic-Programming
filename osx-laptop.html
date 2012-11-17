@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Linux)">
+	<META NAME="AUTHOR" CONTENT="Ecedemo cedemo">
+	<META NAME="CREATED" CONTENT="20080123;12041900">
+	<META NAME="CHANGEDBY" CONTENT="Blake ">
+	<META NAME="CHANGED" CONTENT="20121116;22293500">
+	<META NAME="CHANGEDBY" CONTENT="Blake ">
+	<STYLE TYPE="text/css">
+	<!--
+		H2.cjk { font-family: "AR PL UMing CN" }
+		H2.ctl { font-family: "Lohit Devanagari" }
+		TT { background: #ffffcc }
+		TT.cjk { font-family: "AR PL UMing CN", monospace }
+		TT.ctl { font-family: "Lohit Devanagari", monospace }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H2 CLASS="western" ALIGN=CENTER>OS X Setup</H2>
+<OL>
+	<LI><P>Start Safari (or Firefox/Chrome).</P>
+	<LI><P>Download gcc at
+	<A HREF="https://github.com/kennethreitz/osx-gcc-installer" TARGET="_blank">https://github.com/kennethreitz/osx-gcc-installer</A>.
+	Read the instructions on the page to select the correct installer to
+	download.</P>
+	<LI><P>Install gcc.</P>
+	<LI><P>Download pk2cmd for mac OSX from <A HREF="5.%20http://ww1.microchip.com/downloads/en/DeviceDoc/PK2CMDv1-20MacOSX.zip">microchip.com</A>.</P>
+	<LI><P>Start terminal.</P>
+	<LI><P>In the terminal:</P>
+	<OL>
+		<LI><P>Become root by typing: <BR><TT CLASS="western">sudo bash</TT></P>
+		<LI><P>create a directory named <TT CLASS="western">/usr/local/bin<BR>mkdir
+		-p /usr/local/bin</TT></P>
+	</OL>
+	<LI><P>In Downloads, in the directory PK2CMDv1-20MacOSX, drag pk2cmd
+	and PK2DeviceFile.dat to <TT CLASS="western">/usr/local/bin</TT>.</P>
+	<LI><P><A HREF="ftp://Compilers-RO:C0mP!0511@ftp.microchip.com/HI-TECH%20C%20for%20PIC10-12-16%20(PRO%20and%20Standard)/picc-9.83-osx.run">Download
+	HI-TECH C for the PIC10/12/16 MCU Family for OS X</A>.</P>
+	<LI><P STYLE="margin-bottom: 0in">In the terminal:</P>
+	<OL>
+		<LI><P>Become root by typing: <TT CLASS="western">sudo bash</TT></P>
+		<LI><P>Start the install by typing: <TT CLASS="western">sh
+		./picc-9.83-osx.run</TT></P>
+	</OL>
+	<LI><P>Agree to the license terms. Install the compiler in
+	<TT CLASS="western">/usr/local/picc-9.83 </TT>.</P>
+	<LI><P>Enable the compiler in <TT CLASS="western"><SPAN STYLE="font-variant: normal"><SPAN STYLE="font-style: normal">lite</SPAN></SPAN></TT>
+	mode.</P>
+	<LI><P>In the terminal: as root create a link to the install
+	directory and executable:</P>
+	<OL>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Become
+		root by typing:</SPAN></FONT></TT><TT CLASS="western"><BR>sudo bash</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Change
+		directory:</SPAN></FONT></TT><TT CLASS="western"><BR>cd
+		/usr/local/bin</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Create
+		a link for easy upgrading:</SPAN></FONT></TT><TT CLASS="western"><BR>ln
+		-s ../picc-9.83 picc</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Test
+		picc (your compiler) by typing:</SPAN></FONT></TT><TT CLASS="western"><BR>picc<BR></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">You
+		should see </SPAN></FONT></TT><TT CLASS="western">HI-TECH C
+		Compiler for PIC10/12/16 MCUs V9.83</TT><TT CLASS="western"><SPAN STYLE="background: transparent">
+		</SPAN></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">at
+		the top of the output.</SPAN></FONT></TT></P>
+	</OL>
+	<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Make
+	a new directory that is easy to access. (On your desktop, we called
+	ours </SPAN></FONT></TT><TT CLASS="western">ece101</TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">)</SPAN></FONT></TT></P>
+	<LI><P>Use a web browser to obtain the header and library files from
+	the course web site. 
+	</P>
+	<OL>
+		<LI><P>Go <A HREF="./lab_support_files/2012/">here</A> to download
+		files</P>
+		<LI><P>Right mouse click on each of the following files and save
+		them into your new directory: <BR><TT CLASS="western">Makefile,
+		delay.h, delay.lpp, lcd.h, lcd.lpp, printf.h, printf.lpp</TT></P>
+	</OL>
+	<LI><P>Use your favorite editor (gedit, sublime, nedit, vim, kate,
+	...) to write code. Save in the <TT CLASS="western">ece101</TT>
+	directory.</P>
+</OL>
+<P>Entering Code</P>
+<OL>
+	<LI VALUE=1><P>The first line of any program shall be a comment with
+	the following form: Your name, course, date, and lab day. For
+	example:</P>
+	<P><TT CLASS="western">// Jane Doe ECE 101 01/25/2012 Tuesday</TT></P>
+	<LI><P>Following comments are include header files. Always include
+	<TT CLASS="western">pic.h</TT>. (<TT CLASS="western">#include
+	&lt;pic.h&gt;</TT>)</P>
+	<LI><P>If you are not using <TT CLASS="western">robot.h</TT> which
+	already includes the config bits, you'll need to add the following
+	line in the file where <TT CLASS="western">void main(void)</TT> is
+	defined, immediately after all include &amp; preprocessor
+	directives.</P>
+	<P><TT CLASS="western"><FONT FACE="courier new, monospace"><FONT SIZE=2>__CONFIG(FOSC_INTRC_NOCLKOUT
+	&amp; WDTE_OFF &amp; PWRTE_OFF &amp; MCLRE_OFF &amp; CP_OFF &amp;
+	CPD_OFF &amp; BOREN_OFF &amp; IESO_OFF &amp; FCMEN_OFF &amp; LVP_OFF
+	&amp; DEBUG_OFF);</FONT></FONT></TT></P>
+</OL>
+<P>Compiling and Programming.</P>
+<OL>
+	<LI VALUE=1><P>Sign out a PICKIT2 programmer from a TA.</P>
+	<LI><P>Have a TA check your wiring.</P>
+	<LI><P>Connect power to you breadboard.</P>
+	<LI><P>Connect both ends of the USB cable.</P>
+	<LI><P>Connect your programmer to the 6 pin header on your
+	breadboard. Be sure to orient the programmer correctly. The small
+	white triangle on the front of the programmer points to pin1.</P>
+	<LI><P>On the terminal use the <TT CLASS="western">cd</TT> command
+	to change to the directory with the code you want on your robot.
+	(ex: <TT CLASS="western">ece101</TT>)</P>
+	<OL>
+		<LI VALUE=1><P><TT CLASS="western">make T=filename<BR></TT>where
+		<TT CLASS="western">filename</TT> is your name of your C code
+		source <B>without</B> the <TT CLASS="western">.c</TT> extension.
+		The make command will compile, link and program your program. If
+		your want to just reprogram you PIC use the same command again.</P>
+	</OL>
+</OL>
+</BODY>
+</HTML>

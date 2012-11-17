@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Linux)">
+	<META NAME="AUTHOR" CONTENT="Ecedemo cedemo">
+	<META NAME="CREATED" CONTENT="20080123;12041900">
+	<META NAME="CHANGEDBY" CONTENT="Blake ">
+	<META NAME="CHANGED" CONTENT="20121116;22294800">
+	<META NAME="CHANGEDBY" CONTENT="Blake ">
+	<STYLE TYPE="text/css">
+	<!--
+		H2.cjk { font-family: "AR PL UMing CN" }
+		H2.ctl { font-family: "Lohit Hindi" }
+		TT { background: #ffffcc }
+		TT.cjk { font-family: "AR PL UMing CN", monospace }
+		TT.ctl { font-family: "Lohit Devanagari", monospace }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H2 CLASS="western" ALIGN=CENTER>Windows MPLAB Project Setup</H2>
+<OL>
+	<LI><P>Download <A HREF="http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB_IDE_8_87.zip">MPLab</A>
+	(v8.86) and install.</P>
+	<LI><P>Download <A HREF="ftp://Compilers-RO:C0mP!0511@ftp.microchip.com/HI-TECH%20C%20for%20PIC10-12-16%20(PRO%20and%20Standard)/picc_9_.83_win.exe">HiTech
+	C Compiler</A> and install.</P>
+	<LI><P>Start MPLab from the icon on your desktop</P>
+	<LI><P>In MPLAB IDE, click <TT CLASS="western">Configure</TT> -&gt;
+	<TT CLASS="western">Select Device</TT>. Choose a <TT CLASS="western">PIC16F887</TT>
+	from the <TT CLASS="western">Device</TT> dropdown menu and then
+	click <TT CLASS="western">OK</TT>.</P>
+	<LI><P>Create a new project by clicking <TT CLASS="western">Project</TT>
+	-&gt; <TT CLASS="western">New...</TT>. A dialog box will appear
+	named <TT CLASS="western">New Project</TT>. In the <TT CLASS="western">Project
+	Name</TT> text input box type '<TT CLASS="western">lab</TT> <TT CLASS="western">1</TT>'.
+	In the Project Directory text input box type '<TT CLASS="western">c:/ece101/lab1</TT>'.
+	Click <TT CLASS="western">OK</TT>. If the directory does not exist,
+	click <TT CLASS="western">OK</TT> to create it.</P>
+	<LI><P>Now select the language toolsuite by clicking <TT CLASS="western">Project</TT>
+	-&gt; <TT CLASS="western">Select Language Toolsuite</TT>. 
+	</P>
+	<OL>
+		<LI><P>In the <TT CLASS="western">Active Toolsuite</TT> dropdown
+		box select <TT CLASS="western">HI-TECH Universal ToolSuite</TT>.
+		Click on <TT CLASS="western">HI-TECH Compiler</TT> in the <TT CLASS="western">Toolsuite
+		Contents</TT> text area. 
+		</P>
+		<LI><P>Click <TT CLASS="western">Browse...</TT> navigate to
+		<TT CLASS="western">c:/Program Files</TT>. Double click <TT CLASS="western">HI-TECH
+		Software</TT>. Double click <TT CLASS="western">PICC</TT>. Double
+		click <TT CLASS="western">9.83</TT>. Double click <TT CLASS="western">bin</TT>.
+		Double click <TT CLASS="western">picc.exe</TT>. Click <TT CLASS="western">OK</TT>.</P>
+	</OL>
+	<LI><P>Use a web browser to obtain the header and library files from
+	the course web site. 
+	</P>
+	<OL>
+		<LI><P>Go <A HREF="./lab_support_files/2012/">here</A> to download
+		files</P>
+		<LI><P>Right mouse click on each of the following files and save
+		them into your new directory: <BR><TT CLASS="western">Makefile,
+		delay.h, delay.lpp, lcd.h, lcd.lpp, printf.h, printf.lpp</TT></P>
+	</OL>
+	<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Setup
+	the project files by clicking </SPAN></FONT></TT><TT CLASS="western">View
+	-&gt; Project</TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">.</SPAN></FONT></TT></P>
+	<LI><P>In the <TT CLASS="western">lab1.mcw</TT> project window
+	subwindow, right click <TT CLASS="western">lab1.mcp</TT> and select
+	<TT CLASS="western">Add Files...</TT> Control click all library
+	(<TT CLASS="western">.lib</TT>) and header files (<TT CLASS="western">.h</TT>).
+	then <TT CLASS="western">Open</TT>.</P>
+	<LI><P>In the <TT CLASS="western">lab1.mcw</TT> subwindow, right
+	click <TT CLASS="western">library files</TT> and select <TT CLASS="western">Library
+	Link Order...</TT> Click <TT CLASS="western">delay.lpp</TT> and
+	click the <TT CLASS="western">down arrow</TT> twice to move
+	<TT CLASS="western">delay.lpp</TT> to the bottom. Click <TT CLASS="western">OK</TT>.</P>
+	<LI><P>Click <TT CLASS="western">File</TT> -&gt; <TT CLASS="western">Add
+	New File to Project</TT>. Double click on your project directory
+	(<TT CLASS="western">lab1</TT> in this case). Type <TT CLASS="western">lab1.c</TT>
+	in the <TT CLASS="western">Filename:</TT> text input box. Click
+	<TT CLASS="western">Save</TT>.</P>
+	<LI><P>In the new code editor subwindow, enter your code.</P>
+</OL>
+<P>MPLAB Entering Code</P>
+<OL>
+	<LI VALUE=1><P>The first line of any program shall be a comment with
+	the following form: Your name, course, date, and lab day. For
+	example:</P>
+	<P><TT CLASS="western">// Jane Doe ECE 101 01/25/2012 Tuesday</TT></P>
+	<LI><P>Following comments are include header files. Always include
+	<TT CLASS="western">pic.h</TT>. (<TT CLASS="western">#include
+	&lt;pic.h&gt;</TT>)</P>
+	<LI><P>If you are not using <TT CLASS="western">robot.h</TT> which
+	already includes the config bits, you'll need to add the following
+	line in the file where <TT CLASS="western">void main(void)</TT> is
+	defined, immediately after all include &amp; preprocessor
+	directives.</P>
+	<P><TT CLASS="western"><FONT FACE="courier new, monospace"><FONT SIZE=2>__CONFIG(FOSC_INTRC_NOCLKOUT
+	&amp; WDTE_OFF &amp; PWRTE_OFF &amp; MCLRE_OFF &amp; CP_OFF &amp;
+	CPD_OFF &amp; BOREN_OFF &amp; IESO_OFF &amp; FCMEN_OFF &amp; LVP_OFF
+	&amp; DEBUG_OFF);</FONT></FONT></TT></P>
+</OL>
+<P>MPLAB Compiling</P>
+<OL>
+	<LI><P>Click <TT CLASS="western">Project</TT> -&gt; <TT CLASS="western">Build
+	All</TT>. Check the <TT CLASS="western">Output</TT> subwindow, <TT CLASS="western">Build</TT>
+	tab for error and/or warnings. Fix any and all errors and warnings.
+	Advisory statements may be safely ignored.</P>
+</OL>
+<P>MPLAB Programming</P>
+<OL>
+	<LI><P>Sign out a PICKIT2 programmer from a TA.</P>
+	<LI><P>Connect power to you breadboard after a TA has checked the
+	wiring.</P>
+	<LI><P>Connect both ends of the USB cable.</P>
+	<LI><P>Connect your programmer to the 6 pin header on your
+	breadboard. Be sure to orient the programmer correctly.</P>
+	<LI><P>Click <TT CLASS="western">Programmer</TT> -&gt; <TT CLASS="western">Select
+	Programmer</TT> -&gt; <TT CLASS="western">PicKit2</TT>.</P>
+	<LI><P>To program your chip click <TT CLASS="western">Programmer</TT>
+	-&gt; <TT CLASS="western">Program</TT>. All verifies should pass.</P>
+</OL>
+</BODY>
+</HTML>

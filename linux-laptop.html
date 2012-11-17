@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Linux)">
+	<META NAME="AUTHOR" CONTENT="Ecedemo cedemo">
+	<META NAME="CREATED" CONTENT="20080123;12041900">
+	<META NAME="CHANGEDBY" CONTENT="Blake ">
+	<META NAME="CHANGED" CONTENT="20121116;22292500">
+	<META NAME="CHANGEDBY" CONTENT="Blake ">
+	<META NAME="CHANGEDBY" CONTENT="Blake ">
+	<STYLE TYPE="text/css">
+	<!--
+		H2.cjk { font-family: "AR PL UMing CN" }
+		H2.ctl { font-family: "Lohit Devanagari" }
+		TT { background: #ffffcc }
+		TT.cjk { font-family: "AR PL UMing CN", monospace }
+		TT.ctl { font-family: "Lohit Devanagari", monospace }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H2 CLASS="western" ALIGN=CENTER>Linux Setup</H2>
+<OL>
+	<LI><P>Open a web browser. (Ex: Firefox in <TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Applications</SPAN></FONT></TT><SPAN STYLE="background: transparent">
+	</SPAN><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">-&gt;
+	</SPAN></FONT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Internet</SPAN></FONT></TT><SPAN STYLE="background: transparent">
+	</SPAN><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">-&gt;
+	</SPAN></FONT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Firefox</SPAN></FONT></TT><TT CLASS="western"><SPAN STYLE="background: transparent">)</SPAN></TT>.</P>
+	<LI><P>Download pk2cmd for 2.6 kernels from <A HREF="http://ww1.microchip.com/downloads/en/DeviceDoc/pk2cmdv1-20Linux2-6.tar.gz">microchip.com</A>.
+	(<A HREF="./packages/pk2cmdv1-20Linux2-6.tar.gz">Also here</A>)</P>
+	<LI><P>Uncompress the <TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">pk2cmdv1-20Linux2-6.tar.gz</SPAN></FONT></TT><TT CLASS="western"><BR></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Options:
+	(Choose method a or b)</SPAN></FONT></TT></P>
+</OL>
+<OL>
+	<OL>
+		<OL>
+			<OL TYPE=a>
+				<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Right
+				click on the file and choose uncompress</SPAN></FONT></TT></P>
+				<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">In
+				terminal: </SPAN></FONT></TT><TT CLASS="western">tar -xf
+				pk2cmdv1-20Linux2-6.tar.gz</TT></P>
+			</OL>
+		</OL>
+	</OL>
+</OL>
+<OL START=4>
+	<LI><P>Start a terminal. <TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Applications</SPAN></FONT></TT><SPAN STYLE="background: transparent">
+	</SPAN><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">-&gt;
+	</SPAN></FONT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">System</SPAN></FONT></TT><SPAN STYLE="background: transparent">
+	</SPAN><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Tools</SPAN></FONT></TT><SPAN STYLE="background: transparent">
+	</SPAN><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">-&gt;
+	</SPAN></FONT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Terminal</SPAN></FONT></TT>.</P>
+	<LI><P>In the terminal:</P>
+	<OL>
+		<LI><P>Become root by typing: <BR><TT CLASS="western">sudo bash</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">use
+		the cp(copy) command (Ex: cp source destination)to </SPAN></FONT></TT>copy
+		pk2cmd and PK2DeviceFile.dat to <TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">/usr/local/bin</SPAN></FONT></TT>.<BR><TT CLASS="western">cp
+		pk2cmd /usr/local/bin<BR>cp PK2DeviceFile.dat /usr/local/bin</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">If
+		you are on debian or ubuntu you may need to install ia32-libs with
+		apt:</SPAN></FONT></TT><TT CLASS="western"><BR>sudo apt-get install
+		ia32-libs</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Test
+		your newly installed pk2cmd by typing:</SPAN></FONT></TT><TT CLASS="western"><BR>pk2cmd<BR></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">You
+		should see O</SPAN></FONT></TT><TT CLASS="western">peration
+		Succeeded</TT><TT CLASS="western"><SPAN STYLE="background: transparent">
+		</SPAN></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">at
+		the bottom of the output.</SPAN></FONT></TT></P>
+	</OL>
+	<LI><P><A HREF="ftp://Compilers-RO:C0mP!0511@ftp.microchip.com/HI-TECH%20C%20for%20PIC10-12-16%20(PRO%20and%20Standard)/picc-9.83-linux.run">Download
+	HI-TECH C for the PIC10/12/16 MCU Family for Linux</A>. (<A HREF="./packages/picc-9.83-linux.zip">Also
+	here</A>)</P>
+	<LI><P>In the terminal:</P>
+	<OL>
+		<LI><P>Become root by typing: <TT CLASS="western">sudo bash</TT></P>
+		<LI><P>Start the install by typing: <TT CLASS="western">sh
+		./picc-9.83-linux.run</TT></P>
+	</OL>
+	<LI><P>Agree to the license terms. Install the compiler in
+	<TT CLASS="western">/usr/local/picc-9.83</TT>.</P>
+	<LI><P>Enable the compiler in <TT CLASS="western"><SPAN STYLE="font-variant: normal"><SPAN STYLE="font-style: normal">lite</SPAN></SPAN></TT>
+	mode.</P>
+	<LI><P>In the terminal: as root create a link to the install
+	directory and executable:</P>
+	<OL>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Become
+		root by typing:</SPAN></FONT></TT><TT CLASS="western"><BR>sudo bash</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Change
+		directory:</SPAN></FONT></TT><TT CLASS="western"><BR>cd
+		/usr/local/bin</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Create
+		a link for easy upgrading:</SPAN></FONT></TT><TT CLASS="western"><BR>ln
+		-s ../picc-9.83 picc</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Test
+		picc (your compiler) by typing:</SPAN></FONT></TT><TT CLASS="western"><BR>picc<BR></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">You
+		should see </SPAN></FONT></TT><TT CLASS="western">HI-TECH C
+		Compiler for PIC10/12/16 MCUs V9.83</TT><TT CLASS="western"><SPAN STYLE="background: transparent">
+		</SPAN></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">at
+		the top of the output.</SPAN></FONT></TT></P>
+	</OL>
+	<LI><P>Download these rules files.</P>
+	<OL>
+		<LI><P><TT CLASS="western"><A HREF="./rules/99-pickit2.rules">99-pickit2.rules</A></TT>
+		and <TT CLASS="western"><A HREF="./rules/99-libusb.rules">99-libusb.rules</A></TT>
+				</P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Become
+		root by typing:</SPAN></FONT></TT><TT CLASS="western"><BR>sudo bash</TT></P>
+		<LI><P>Use the mv(move) command to move the rules to
+		<TT CLASS="western">/etc/udev/rules.d<BR>mv 99-pickit2.rules
+		/etc/udev/rules.d/<BR>mv 99-libusb.rules /etc/udev/rules.d/</TT></P>
+		<LI><P>Leave root:<BR><TT CLASS="western">exit</TT></P>
+	</OL>
+	<LI><P>Make a new directory that is easy to access. (On your
+	desktop)<BR>In terminal:</P>
+	<OL>
+		<LI><P>Change directory:<BR><TT CLASS="western">cd ~/Desktop</TT></P>
+		<LI><P>Create a directory for you code<BR><TT CLASS="western">mkdir
+		ece101</TT></P>
+		<LI><P>Change into your new directory:<BR><TT CLASS="western">cd
+		ece101</TT></P>
+	</OL>
+	<P><TT CLASS="western">cd<BR>mkdir ece101<BR>cd ece101</TT></P>
+	<LI><P>Use a web browser to obtain the header and library files from
+	the course web site. 
+	</P>
+	<OL>
+		<LI><P>Go <A HREF="./lab_support_files/2012/">here</A> to download
+		files</P>
+		<LI><P>Right mouse click on each of the following files and save
+		them into your new directory: <BR><TT CLASS="western">Makefile,
+		delay.h, delay.lpp, lcd.h, lcd.lpp, printf.h, printf.lpp</TT></P>
+	</OL>
+	<LI><P>Use your favorite editor (gedit, nedit, vim, kate, ...) to
+	write code. Save in the <TT CLASS="western">ece101</TT> directory.</P>
+</OL>
+<P>Entering Code</P>
+<OL>
+	<LI VALUE=1><P>The first line of any program shall be a comment with
+	the following form: Your name, course, date, and lab day. For
+	example:</P>
+	<P><TT CLASS="western">// Jane Doe ECE 101 01/25/2012 Tuesday</TT></P>
+	<LI><P>Following comments are include header files. Always include
+	<TT CLASS="western">pic.h</TT>. (<TT CLASS="western">#include
+	&lt;pic.h&gt;</TT>)</P>
+	<LI><P>If you are not using <TT CLASS="western">robot.h</TT> which
+	already includes the config bits, you'll need to add the following
+	line in the file where <TT CLASS="western">void main(void)</TT> is
+	defined, immediately after all include &amp; preprocessor
+	directives.</P>
+	<P><TT CLASS="western"><FONT FACE="courier new, monospace"><FONT SIZE=2>__CONFIG(FOSC_INTRC_NOCLKOUT
+	&amp; WDTE_OFF &amp; PWRTE_OFF &amp; MCLRE_OFF &amp; CP_OFF &amp;
+	CPD_OFF &amp; BOREN_OFF &amp; IESO_OFF &amp; FCMEN_OFF &amp; LVP_OFF
+	&amp; DEBUG_OFF);</FONT></FONT></TT></P>
+</OL>
+<P>Compiling and Programming.</P>
+<OL>
+	<LI VALUE=1><P>Sign out a PICKIT2 programmer from a TA.</P>
+	<LI><P>Have a TA check your wiring.</P>
+	<LI><P>Connect power to you breadboard.</P>
+	<LI><P>Connect both ends of the USB cable.</P>
+	<LI><P>Connect your programmer to the 6 pin header on your
+	breadboard. Be sure to orient the programmer correctly. The small
+	white triangle on the front of the programmer points to pin1.</P>
+	<LI><P>On the terminal use the <TT CLASS="western">cd</TT> command
+	to change to the directory with the code you want on your robot.
+	(ex: <TT CLASS="western">ece101</TT>)</P>
+	<OL>
+		<LI><P><TT CLASS="western">make T=filename<BR></TT>where <TT CLASS="western">filename</TT>
+		is your name of your C code source <B>without</B> the <TT CLASS="western">.c</TT>
+		extension. The make command will compile, link and program your
+		program. If your want to just reprogram you PIC use the same
+		command again.</P>
+	</OL>
+</OL>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

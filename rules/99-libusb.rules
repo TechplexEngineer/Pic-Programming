@@ -1,0 +1,2 @@
+# libusb device nodes
+ACTION=="add", BUS=="usb", ENV{DEVTYPE}=="usb_device", MODE="0666"
