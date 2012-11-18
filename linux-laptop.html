@@ -7,7 +7,9 @@
 	<META NAME="AUTHOR" CONTENT="Ecedemo cedemo">
 	<META NAME="CREATED" CONTENT="20080123;12041900">
 	<META NAME="CHANGEDBY" CONTENT="Blake ">
-	<META NAME="CHANGED" CONTENT="20121116;22292500">
+	<META NAME="CHANGED" CONTENT="20121118;9534800">
+	<META NAME="CHANGEDBY" CONTENT="Blake ">
+	<META NAME="CHANGEDBY" CONTENT="Blake ">
 	<META NAME="CHANGEDBY" CONTENT="Blake ">
 	<META NAME="CHANGEDBY" CONTENT="Blake ">
 	<STYLE TYPE="text/css">
@@ -56,10 +58,14 @@
 	<LI><P>In the terminal:</P>
 	<OL>
 		<LI><P>Become root by typing: <BR><TT CLASS="western">sudo bash</TT></P>
-		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">use
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Use
 		the cp(copy) command (Ex: cp source destination)to </SPAN></FONT></TT>copy
 		pk2cmd and PK2DeviceFile.dat to <TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">/usr/local/bin</SPAN></FONT></TT>.<BR><TT CLASS="western">cp
 		pk2cmd /usr/local/bin<BR>cp PK2DeviceFile.dat /usr/local/bin</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">To
+		ensure that pk2cmd is usable to no root users, the permissions need
+		to be changed:</SPAN></FONT></TT><TT CLASS="western"><BR>chmod
+		ugo+rw pk2cmd<BR>chmod ugo+rw PK2DeviceFile.dat</TT></P>
 		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">If
 		you are on debian or ubuntu you may need to install ia32-libs with
 		apt:</SPAN></FONT></TT><TT CLASS="western"><BR>sudo apt-get install
@@ -79,9 +85,19 @@
 		<LI><P>Become root by typing: <TT CLASS="western">sudo bash</TT></P>
 		<LI><P>Start the install by typing: <TT CLASS="western">sh
 		./picc-9.83-linux.run</TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">When
+		the </SPAN></FONT></TT><TT CLASS="western">SINGLE USER SOFTWARE
+		LICENSE AGREEMENT</TT><TT CLASS="western"><SPAN STYLE="background: transparent">
+		</SPAN></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">appears
+		on screen, use the enter key on your keyboard to advance to the end
+		of the message. Then at the prompt </SPAN></FONT></TT><TT CLASS="western">Do
+		you accept the terms of the license agreement?</TT><TT CLASS="western"><SPAN STYLE="background: transparent">
+		</SPAN></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Press
+		</SPAN></FONT></TT><TT CLASS="western">y</TT><TT CLASS="western"><SPAN STYLE="background: transparent">
+		</SPAN></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">then
+		</SPAN></FONT></TT><TT CLASS="western">enter</TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">.</SPAN></FONT></TT></P>
 	</OL>
-	<LI><P>Agree to the license terms. Install the compiler in
-	<TT CLASS="western">/usr/local/picc-9.83</TT>.</P>
+	<LI><P>Install the compiler in <TT CLASS="western">/usr/local/picc-9.83</TT></P>
 	<LI><P>Enable the compiler in <TT CLASS="western"><SPAN STYLE="font-variant: normal"><SPAN STYLE="font-style: normal">lite</SPAN></SPAN></TT>
 	mode.</P>
 	<LI><P>In the terminal: as root create a link to the install
@@ -94,7 +110,7 @@
 		/usr/local/bin</TT></P>
 		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Create
 		a link for easy upgrading:</SPAN></FONT></TT><TT CLASS="western"><BR>ln
-		-s ../picc-9.83 picc</TT></P>
+		-s ../picc-9.83/bin/picc picc</TT></P>
 		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Test
 		picc (your compiler) by typing:</SPAN></FONT></TT><TT CLASS="western"><BR>picc<BR></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">You
 		should see </SPAN></FONT></TT><TT CLASS="western">HI-TECH C
@@ -102,11 +118,18 @@
 		</SPAN></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">at
 		the top of the output.</SPAN></FONT></TT></P>
 	</OL>
-	<LI><P>Download these rules files.</P>
+	<LI><P>Download and install rules needed to allow the programs to
+	communicate with the pk2cmd:</P>
 	<OL>
-		<LI><P><TT CLASS="western"><A HREF="./rules/99-pickit2.rules">99-pickit2.rules</A></TT>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Download
+		these rules file by right clicking and choosing </SPAN></FONT></TT><TT CLASS="western">Save
+		Link As...</TT><TT CLASS="western"><SPAN STYLE="background: transparent">
+		</SPAN></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">(or
+		similar) Save the files in your downloads folder</SPAN></FONT></TT><TT CLASS="western"><BR><A HREF="./rules/99-pickit2.rules">99-pickit2.rules</A></TT>
 		and <TT CLASS="western"><A HREF="./rules/99-libusb.rules">99-libusb.rules</A></TT>
 				</P>
+		<LI><P>Use the cd (change directory) command to point the terminal
+		to downloads<BR><TT CLASS="western">cd ~/Downloads</TT></P>
 		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Become
 		root by typing:</SPAN></FONT></TT><TT CLASS="western"><BR>sudo bash</TT></P>
 		<LI><P>Use the mv(move) command to move the rules to
@@ -123,7 +146,6 @@
 		<LI><P>Change into your new directory:<BR><TT CLASS="western">cd
 		ece101</TT></P>
 	</OL>
-	<P><TT CLASS="western">cd<BR>mkdir ece101<BR>cd ece101</TT></P>
 	<LI><P>Use a web browser to obtain the header and library files from
 	the course web site. 
 	</P>
@@ -143,8 +165,8 @@
 	the following form: Your name, course, date, and lab day. For
 	example:</P>
 	<P><TT CLASS="western">// Jane Doe ECE 101 01/25/2012 Tuesday</TT></P>
-	<LI><P>Following comments are include header files. Always include
-	<TT CLASS="western">pic.h</TT>. (<TT CLASS="western">#include
+	<LI><P>Following the comments are include header files. Always
+	include <TT CLASS="western">pic.h</TT>. (<TT CLASS="western">#include
 	&lt;pic.h&gt;</TT>)</P>
 	<LI><P>If you are not using <TT CLASS="western">robot.h</TT> which
 	already includes the config bits, you'll need to add the following
