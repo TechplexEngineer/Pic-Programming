@@ -3,11 +3,12 @@
 <HEAD>
 	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
 	<TITLE></TITLE>
-	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Linux)">
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.6  (Linux)">
 	<META NAME="AUTHOR" CONTENT="Ecedemo cedemo">
 	<META NAME="CREATED" CONTENT="20080123;12041900">
 	<META NAME="CHANGEDBY" CONTENT="Blake ">
-	<META NAME="CHANGED" CONTENT="20121116;22294800">
+	<META NAME="CHANGED" CONTENT="20121120;13592800">
+	<META NAME="CHANGEDBY" CONTENT="Blake ">
 	<META NAME="CHANGEDBY" CONTENT="Blake ">
 	<STYLE TYPE="text/css">
 	<!--
@@ -25,68 +26,100 @@
 	<LI><P>Download <A HREF="http://ww1.microchip.com/downloads/en/DeviceDoc/MPLAB_IDE_8_87.zip">MPLab</A>
 	(v8.86) and install.</P>
 	<LI><P>Download <A HREF="ftp://Compilers-RO:C0mP!0511@ftp.microchip.com/HI-TECH%20C%20for%20PIC10-12-16%20(PRO%20and%20Standard)/picc_9_.83_win.exe">HiTech
-	C Compiler</A> and install.</P>
+	C Compiler</A> and install. (Choose <TT CLASS="western">lite</TT>
+	mode and <TT CLASS="western">add to environment path</TT>)</P>
+	<LI><P>If MPLab was open during the install. Exit out of MPLab.</P>
 	<LI><P>Start MPLab from the icon on your desktop</P>
-	<LI><P>In MPLAB IDE, click <TT CLASS="western">Configure</TT> -&gt;
-	<TT CLASS="western">Select Device</TT>. Choose a <TT CLASS="western">PIC16F887</TT>
-	from the <TT CLASS="western">Device</TT> dropdown menu and then
-	click <TT CLASS="western">OK</TT>.</P>
-	<LI><P>Create a new project by clicking <TT CLASS="western">Project</TT>
-	-&gt; <TT CLASS="western">New...</TT>. A dialog box will appear
-	named <TT CLASS="western">New Project</TT>. In the <TT CLASS="western">Project
-	Name</TT> text input box type '<TT CLASS="western">lab</TT> <TT CLASS="western">1</TT>'.
-	In the Project Directory text input box type '<TT CLASS="western">c:/ece101/lab1</TT>'.
-	Click <TT CLASS="western">OK</TT>. If the directory does not exist,
-	click <TT CLASS="western">OK</TT> to create it.</P>
-	<LI><P>Now select the language toolsuite by clicking <TT CLASS="western">Project</TT>
-	-&gt; <TT CLASS="western">Select Language Toolsuite</TT>. 
-	</P>
+	<LI><P>To tell MPLAP what PIC chip we have:</P>
 	<OL>
+		<LI><P>In MPLAB IDE, click <TT CLASS="western">Configure</TT> -&gt;
+		<TT CLASS="western">Select Device</TT>. 
+		</P>
+		<LI><P>Choose a <TT CLASS="western">PIC16F887</TT> from the <TT CLASS="western">Device</TT>
+		dropdown menu 
+		</P>
+		<LI><P>click <TT CLASS="western">OK</TT>.</P>
+	</OL>
+	<LI><P>To create a new project:</P>
+	<OL>
+		<LI><P> by clicking <TT CLASS="western">Project</TT> -&gt; <TT CLASS="western">New...</TT>.
+		A dialog box will appear named <TT CLASS="western">New Project</TT>.
+				</P>
+		<LI><P>In the <TT CLASS="western">Project Name</TT> text input box
+		type '<TT CLASS="western">lab</TT> <TT CLASS="western">1</TT>'. 
+		</P>
+		<LI><P>In the Project Directory text input box create a new folder
+		on your desktop and call it <TT CLASS="western">ece101</TT></P>
+		<LI><P>Click <TT CLASS="western">OK</TT>. If the directory does not
+		exist, click <TT CLASS="western">OK</TT> to create it.</P>
+	</OL>
+	<LI><P>To tell MPLab how to compile our code:</P>
+	<OL>
+		<LI><P>Now select the language toolsuite by clicking <TT CLASS="western">Project</TT>
+		-&gt; <TT CLASS="western">Select Language Toolsuite</TT>. 
+		</P>
 		<LI><P>In the <TT CLASS="western">Active Toolsuite</TT> dropdown
 		box select <TT CLASS="western">HI-TECH Universal ToolSuite</TT>.
 		Click on <TT CLASS="western">HI-TECH Compiler</TT> in the <TT CLASS="western">Toolsuite
 		Contents</TT> text area. 
 		</P>
-		<LI><P>Click <TT CLASS="western">Browse...</TT> navigate to
-		<TT CLASS="western">c:/Program Files</TT>. Double click <TT CLASS="western">HI-TECH
-		Software</TT>. Double click <TT CLASS="western">PICC</TT>. Double
-		click <TT CLASS="western">9.83</TT>. Double click <TT CLASS="western">bin</TT>.
-		Double click <TT CLASS="western">picc.exe</TT>. Click <TT CLASS="western">OK</TT>.</P>
+		<LI><P>Click the <TT CLASS="western">Browse...</TT> button 
+		</P>
+		<LI><P>Navigate to <TT CLASS="western">c:/Program Files</TT><TT CLASS="western"><FONT FACE="Liberation Serif, serif"><SPAN STYLE="background: transparent">
+		</SPAN></FONT></TT><TT CLASS="western"><FONT FACE="Liberation Serif, serif"><SPAN STYLE="background: transparent">If
+		you are on a 64bit computers you may need to look in c:/Program
+		files (x86)</SPAN></FONT></TT></P>
+		<LI><P>Double click <TT CLASS="western">HI-TECH Software</TT>. 
+		</P>
+		<LI><P>Double click <TT CLASS="western">PICC</TT>. 
+		</P>
+		<LI><P>Double click <TT CLASS="western">9.83</TT>. 
+		</P>
+		<LI><P>Double click <TT CLASS="western">bin</TT>. Double click
+		<TT CLASS="western">picc.exe</TT>. Click <TT CLASS="western">OK</TT>.</P>
 	</OL>
-	<LI><P>Use a web browser to obtain the header and library files from
-	the course web site. 
+	<LI><P>To get the starter files from the course website:. 
 	</P>
 	<OL>
-		<LI><P>Go <A HREF="./pic_projects/libs/12">here</A> to download
-		files</P>
-		<LI><P>Right mouse click on each of the following files and save
-		them into your new directory: <BR><TT CLASS="western">Makefile,
-		delay.h, delay.lpp, lcd.h, lcd.lpp, printf.h, printf.lpp</TT></P>
+		<LI><P>Go <A HREF="pic_projects/libs/12">here</A> to download files</P>
+		<LI><P>Right mouse click on <U>each</U> of the files and save them
+		into your new directory.</P>
 	</OL>
-	<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Setup
-	the project files by clicking </SPAN></FONT></TT><TT CLASS="western">View
-	-&gt; Project</TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">.</SPAN></FONT></TT></P>
-	<LI><P>In the <TT CLASS="western">lab1.mcw</TT> project window
-	subwindow, right click <TT CLASS="western">lab1.mcp</TT> and select
-	<TT CLASS="western">Add Files...</TT> Control click all library
-	(<TT CLASS="western">.lib</TT>) and header files (<TT CLASS="western">.h</TT>).
-	then <TT CLASS="western">Open</TT>.</P>
-	<LI><P>In the <TT CLASS="western">lab1.mcw</TT> subwindow, right
-	click <TT CLASS="western">library files</TT> and select <TT CLASS="western">Library
-	Link Order...</TT> Click <TT CLASS="western">delay.lpp</TT> and
-	click the <TT CLASS="western">down arrow</TT> twice to move
-	<TT CLASS="western">delay.lpp</TT> to the bottom. Click <TT CLASS="western">OK</TT>.</P>
-	<LI><P>Click <TT CLASS="western">File</TT> -&gt; <TT CLASS="western">Add
-	New File to Project</TT>. Double click on your project directory
-	(<TT CLASS="western">lab1</TT> in this case). Type <TT CLASS="western">lab1.c</TT>
-	in the <TT CLASS="western">Filename:</TT> text input box. Click
-	<TT CLASS="western">Save</TT>.</P>
-	<LI><P>In the new code editor subwindow, enter your code.</P>
+	<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">To
+	add the starter files to our project:</SPAN></FONT></TT></P>
+	<OL>
+		<LI><P><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">Show
+		the project explorer by choosing:</SPAN></FONT></TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">
+		</SPAN></FONT></TT><TT CLASS="western">View -&gt; Project</TT><TT CLASS="western"><FONT FACE="Times New Roman, serif"><SPAN STYLE="background: transparent">.</SPAN></FONT></TT></P>
+		<LI><P>In the <TT CLASS="western">lab1.mcw</TT> project subwindow,
+		right click <TT CLASS="western">lab1.mcp</TT> and select <TT CLASS="western">Add
+		Files...</TT> Control click all library (<TT CLASS="western">.</TT><TT CLASS="western">lpp</TT>)
+		and header files (<TT CLASS="western">.h</TT>). then <TT CLASS="western">Open</TT>.</P>
+		<LI><P>In the <TT CLASS="western">lab1.mcw</TT> subwindow, right
+		click <TT CLASS="western">library files</TT> and select <TT CLASS="western">Library
+		Link Order...</TT> Click <TT CLASS="western">delay.lpp</TT> and
+		click the <TT CLASS="western">down arrow</TT> twice to move
+		<TT CLASS="western">delay.lpp</TT> to the bottom. Click <TT CLASS="western">OK</TT>.</P>
+		<LI><P>To enter code, open <TT CLASS="western">robot.c</TT>  enter
+		your code inside the <TT CLASS="western">main</TT> function;</P>
+	</OL>
+	<LI><P>To setup the delay library: (The delay library needs to know
+	how fast the PIC processor is.)</P>
+	<OL>
+		<LI><P>Choose Project → build options → robot.c</P>
+		<LI><P>In the second field just left of the add button enter:
+		<TT CLASS="western">_</TT><TT CLASS="western"><SPAN STYLE="text-decoration: none">XTAL_FREQ=4000</SPAN></TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Liberation Serif, serif"><SPAN STYLE="text-decoration: none"><SPAN STYLE="background: transparent">Click
+		the </SPAN></SPAN></FONT></TT><TT CLASS="western"><SPAN STYLE="text-decoration: none">add</SPAN></TT><TT CLASS="western"><FONT FACE="Liberation Serif, serif"><SPAN STYLE="text-decoration: none"><SPAN STYLE="background: transparent">
+		button.</SPAN></SPAN></FONT></TT></P>
+		<LI><P><TT CLASS="western"><FONT FACE="Liberation Serif, serif"><SPAN STYLE="text-decoration: none"><SPAN STYLE="background: transparent">Close
+		the build options window.</SPAN></SPAN></FONT></TT></P>
+	</OL>
 </OL>
 <P>MPLAB Entering Code</P>
 <OL>
-	<LI VALUE=1><P>The first line of any program shall be a comment with
-	the following form: Your name, course, date, and lab day. For
+	<LI VALUE=1><P>The first line of any program should be a comment
+	with the following form: Your name, course, date, and lab day. For
 	example:</P>
 	<P><TT CLASS="western">// Jane Doe ECE 101 01/25/2012 Tuesday</TT></P>
 	<LI><P>Following comments are include header files. Always include
